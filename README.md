@@ -2,7 +2,7 @@
 Automated encryption utilities and installation
 
 I wanted to write a script to automate some encryption related operations but i may have gone a little overboard. Regardless
-the tool automates OpenSLL, has a feature to securely backup data in an encrypted archive and shred the original files.
+the tool automates OpenSSL, has a feature to securely backup data in an encrypted archive and shred the original files.
 It also automates the installation of the `pwgen`, `shred`, `OpenSSL`, `7z` and `encryptcli` utilities as well as the installation of VeraCrypt and Encryptpad.
 
 ## Quick Usage
