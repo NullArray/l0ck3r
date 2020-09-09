@@ -82,25 +82,6 @@ function logo(){
 #=-Licensed |$GREEN GNU GPL 3 $CYAN
 #########=--+---------------+$RESET "
     }
-function archive(){
-    clear && logo
-    notification "Encrypted Archive Mode"
-    mkdir Archive > /dev/null
-    cd Archive
-
-    read -p "Path to files: " path
-    stat $path > /dev/null || warning "Invalid Path" && menu
-    cp -f $path/* $(pwd)/*
-
-    notification_b "Done copying files. Archiving..."
-    7z a results.7z * -p
-    mv results.7z ..
-    cd ..
-
-    find Archive -depth -type f -exec shred -v -n 1 -z -u {} \; && rm -rf Archive
-    notification_b "Archive as 'results.7z' in the current working directory"
-    menu
-    }
 
 function deps(){
     logo && sleep 1.5
